@@ -302,10 +302,10 @@
       const m=val.match(/\bNM\d+-\d+\b/);
       if(m){
         const code=m[0];
-        if(NITRO_ASIN[code])return'https://www.amazon.com/dp/'+NITRO_ASIN[code]+'?tag=mousse1-20';
-        return'https://www.amazon.com/s?k=Nitro+Mousse+'+encodeURIComponent(code)+'&tag=mousse1-20';
+        if(NITRO_ASIN[code])return'https://www.amazon.com/dp/'+NITRO_ASIN[code]+'?tag=mousse1-20&smid=A122T64JJB9KPU';
+        return'https://www.amazon.com/s?k=Nitro+Mousse+'+encodeURIComponent(code)+'&tag=mousse1-20&smid=A122T64JJB9KPU';
       }
-      return'https://www.amazon.com/s?k=Nitro+Mousse+enduro&tag=mousse1-20';
+      return'https://www.amazon.com/s?k=Nitro+Mousse+enduro&tag=mousse1-20&smid=A122T64JJB9KPU';
     }
 
     const TECHNO_ASIN={
@@ -317,10 +317,10 @@
       const m=val.match(/Black Series\/Standard:\s*([A-Z0-9]+)/);
       if(m&&m[1]!=='No'){
         const code=m[1];
-        if(TECHNO_ASIN[code])return'https://www.amazon.com/dp/'+TECHNO_ASIN[code]+'?tag=mousse1-20';
-        return'https://www.amazon.com/s?k=Technomousse+'+encodeURIComponent(code)+'&tag=mousse1-20';
+        if(TECHNO_ASIN[code])return'https://www.amazon.com/dp/'+TECHNO_ASIN[code]+'?tag=mousse1-20&smid=A122T64JJB9KPU';
+        return'https://www.amazon.com/s?k=Technomousse+'+encodeURIComponent(code)+'&tag=mousse1-20&smid=A122T64JJB9KPU';
       }
-      return'https://www.amazon.com/stores/AthenaParts/page/CC7C7608-11FB-4D3E-BA6D-5D3D5ADBBE59?tag=mousse1-20';
+      return'https://www.amazon.com/s?k=Technomousse&tag=mousse1-20&smid=A122T64JJB9KPU';
     }
 
     function showResults(brand,model,size,rim){
