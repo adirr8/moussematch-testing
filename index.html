@@ -114,18 +114,22 @@
     @media(max-width:520px){.card{padding:24px 18px}.mousse-grid{grid-template-columns:1fr 1fr}.stat-row{gap:20px}}
     /* NAV */
     .site-nav{display:flex;justify-content:center;gap:8px;padding:0 20px 32px;position:relative;z-index:1}
-    .nav-tab{font-family:'DM Sans',system-ui,sans-serif;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;padding:10px 22px;border-radius:99px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;transition:all 0.2s}
+    .nav-tab{font-family:'DM Sans',system-ui,sans-serif;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;padding:10px 22px;border-radius:99px;border:1px solid var(--border);background:transparent;color:var(--text);cursor:pointer;transition:all 0.2s}
     .nav-tab:hover{border-color:var(--accent2);color:var(--accent2)}
     .nav-tab.active{background:var(--accent);border-color:var(--accent);color:#fff}
     /* TOOLS PAGE */
     .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:8px}
     .tool-card{background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;gap:10px}
-    .tool-icon{font-size:28px;line-height:1}
+    .tool-img{width:100%;height:140px;object-fit:contain;border-radius:8px;background:var(--surface);margin-bottom:2px}
     .tool-name{font-weight:600;font-size:14px;line-height:1.4;color:var(--text)}
     .tool-desc{font-size:12px;color:var(--muted);line-height:1.5;flex:1}
     .tool-price{font-family:'Bebas Neue','Arial Black',sans-serif;font-size:20px;color:var(--accent2);letter-spacing:1px}
     .tool-btn{display:inline-block;margin-top:4px;background:var(--gold);color:#1a1200;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;padding:7px 14px;border-radius:99px;text-decoration:none;text-align:center;transition:opacity 0.2s}
     .tool-btn:hover{opacity:0.85}
+    .tools-section{margin-bottom:32px}
+    .tools-section:last-child{margin-bottom:0}
+    .tools-subheading{font-family:'Bebas Neue','Arial Black',sans-serif;font-size:16px;letter-spacing:2px;color:var(--text);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+    .tools-subheading::after{content:'';flex:1;height:1px;background:var(--border)}
     @media(max-width:520px){.tools-grid{grid-template-columns:1fr 1fr}}
   </style>
 </head>
@@ -212,49 +216,67 @@
   <div id="page-tools" style="display:none">
   <div class="container">
     <div class="card">
-      <div class="card-title">Tire &amp; Mousse Changing Tools</div>
-      <div class="tools-grid">
-
-        <div class="tool-card">
-          <div class="tool-icon">🔧</div>
-          <div class="tool-name">Motion Pro Spoon Type Tire Iron Set</div>
-          <div class="tool-desc">Professional-grade spoon irons for mounting and removing off-road tires. A must-have for any mousse install.</div>
-          <div class="tool-price">$48.99</div>
-          <a class="tool-btn" href="https://www.amazon.com/dp/B000QFVJ5O?tag=mousse1-20" target="_blank" rel="noopener sponsored">Buy on Amazon ↗</a>
+<!-- Tire/Mousse Changers -->
+      <div class="tools-section">
+        <div class="tools-subheading">Tire / Mousse Changers</div>
+        <div class="tools-grid">
+          <div class="tool-card">
+            <img class="tool-img" src="https://m.media-amazon.com/images/I/61CQm5Z3z2L._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Rabaconda 3MMC Tire Changer">
+            <div class="tool-name">Rabaconda Dirt Bike Tire Changer (3MMC)</div>
+            <div class="tool-desc">The fastest bead breaker and tire changer for dirt and dual sport bikes. Built for speed and ease — no more fighting with spoons alone.</div>
+            <div class="tool-price">$499.00</div>
+            <a class="tool-btn" href="https://www.amazon.com/dp/B00N3C9J54?tag=mousse1-20" target="_blank" rel="noopener sponsored">Buy on Amazon ↗</a>
+          </div>
+          <div class="tool-card">
+            <img class="tool-img" src="https://m.media-amazon.com/images/I/51QL465VqHL._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Neutron Speed Pro Tire Changer">
+            <div class="tool-name">Neutron Speed Pro Tire & Mousse Changer</div>
+            <div class="tool-desc">Dirt bike tire changer, bead breaker, and mousse changer in one. Compatible with tubes and mousses for dirt and dual sport bikes.</div>
+            <div class="tool-price">$318.99</div>
+            <a class="tool-btn" href="https://www.amazon.com/dp/B0CKTPX38V?tag=mousse1-20" target="_blank" rel="noopener sponsored">Buy on Amazon ↗</a>
+          </div>
+          <div class="tool-card">
+            <img class="tool-img" src="https://m.media-amazon.com/images/I/61tAMjfas7L._AC_SY450_.jpg" alt="VEVOR Dirt Bike Tire Changer Kit">
+            <div class="tool-name">VEVOR Dirt Bike Tire Changer Kit</div>
+            <div class="tool-desc">Full kit for 16"–21" wheels with bead breaker, tire irons, protective sleeves, and storage bag. Fits 15/17/20/25mm axles.</div>
+            <div class="tool-price">$156.90</div>
+            <a class="tool-btn" href="https://www.amazon.com/dp/B0GH3JM1GZ?tag=mousse1-20" target="_blank" rel="noopener sponsored">Buy on Amazon ↗</a>
+          </div>
         </div>
+      </div>
 
-        <div class="tool-card">
-          <div class="tool-icon">🪝</div>
-          <div class="tool-name">Motion Pro Bead Buddy II</div>
-          <div class="tool-desc">Holds the tire bead seated in the drop-center while you work around the rim — essential for mousse installs.</div>
-          <div class="tool-price">$17.99</div>
-          <a class="tool-btn" href="https://www.amazon.com/dp/B0035UDHZ2?tag=mousse1-20" target="_blank" rel="noopener sponsored">Buy on Amazon ↗</a>
+      <!-- Tools -->
+      <div class="tools-section">
+        <div class="tools-subheading">Tools</div>
+        <div class="tools-grid">
+          <div class="tool-card">
+            <img class="tool-img" src="https://m.media-amazon.com/images/I/61y8DsheflL._AC_SX355_.jpg" alt="Motion Pro Tire Iron Set">
+            <div class="tool-name">Motion Pro Spoon Type Tire Iron Set</div>
+            <div class="tool-desc">Professional-grade spoon irons for mounting and removing off-road tires. A must-have for any mousse install.</div>
+            <div class="tool-price">$48.99</div>
+            <a class="tool-btn" href="https://www.amazon.com/dp/B000QFVJ5O?tag=mousse1-20" target="_blank" rel="noopener sponsored">Buy on Amazon ↗</a>
+          </div>
         </div>
+      </div>
 
-        <div class="tool-card">
-          <div class="tool-icon">🛞</div>
-          <div class="tool-name">TUSK Adjustable Tire Changing Stand</div>
-          <div class="tool-desc">Clamps to your wheel and holds it at a comfortable height so you can change tires without bending over.</div>
-          <div class="tool-price">$139.99</div>
-          <a class="tool-btn" href="https://www.amazon.com/dp/B00YNTVRK6?tag=mousse1-20" target="_blank" rel="noopener sponsored">Buy on Amazon ↗</a>
+      <!-- Miscellaneous -->
+      <div class="tools-section">
+        <div class="tools-subheading">Miscellaneous</div>
+        <div class="tools-grid">
+          <div class="tool-card">
+            <img class="tool-img" src="https://m.media-amazon.com/images/I/71Q8MhX+gTL._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Rim Protectors 2-Pack">
+            <div class="tool-name">Rim Protectors (2-Pack)</div>
+            <div class="tool-desc">Plastic rim guards that sit between your tire irons and the rim, preventing scratches and gouges during changes.</div>
+            <div class="tool-price">$11.99</div>
+            <a class="tool-btn" href="https://www.amazon.com/dp/B0FMXWT38G?tag=mousse1-20" target="_blank" rel="noopener sponsored">Buy on Amazon ↗</a>
+          </div>
+          <div class="tool-card">
+            <img class="tool-img" src="https://m.media-amazon.com/images/I/51NRe2PYuyL._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Nuetech Nitro Mousse Lube">
+            <div class="tool-name">Nuetech Nitro Mousse Lube (50g)</div>
+            <div class="tool-desc">Purpose-made lubricant for installing Nitro Mousse foam inserts. Reduces friction and makes seating the mousse much easier.</div>
+            <div class="tool-price">$15.95</div>
+            <a class="tool-btn" href="https://www.amazon.com/dp/B077CR8XBT?tag=mousse1-20" target="_blank" rel="noopener sponsored">Buy on Amazon ↗</a>
+          </div>
         </div>
-
-        <div class="tool-card">
-          <div class="tool-icon">🛡️</div>
-          <div class="tool-name">Rim Protectors (2-Pack)</div>
-          <div class="tool-desc">Plastic rim guards that sit between your tire irons and the rim, preventing scratches and gouges during changes.</div>
-          <div class="tool-price">$11.99</div>
-          <a class="tool-btn" href="https://www.amazon.com/dp/B0FMXWT38G?tag=mousse1-20" target="_blank" rel="noopener sponsored">Buy on Amazon ↗</a>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-icon">🧴</div>
-          <div class="tool-name">Nuetech Nitro Mousse Lube (50g)</div>
-          <div class="tool-desc">Purpose-made lubricant for installing Nitro Mousse foam inserts. Reduces friction and makes seating the mousse much easier.</div>
-          <div class="tool-price">$15.95</div>
-          <a class="tool-btn" href="https://www.amazon.com/dp/B077CR8XBT?tag=mousse1-20" target="_blank" rel="noopener sponsored">Buy on Amazon ↗</a>
-        </div>
-
       </div>
     </div>
   </div>
@@ -271,8 +293,7 @@
   </div>
 
   <footer>
-    Sourced from the official Mousse manufacturers fitment Charts.<br>
-    For informational purposes only &mdash; always verify compatibility before purchase.<br>
+    Sourced from the official mousse manufacturers fitment charts/files &mdash; always verify compatibility before purchase.<br>
     As an Amazon Associate I earn from qualifying purchases.<br>
     &copy; <span id="yr"></span> MousseMatch.com
   </footer>
