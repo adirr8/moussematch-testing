@@ -112,6 +112,21 @@
     .contact-btn{display:inline-flex;align-items:center;gap:8px;padding:9px 20px;border-radius:99px;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;font-weight:600;text-decoration:none;transition:all 0.2s;background:var(--accent);color:#fff}
     .contact-btn:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 6px 16px rgba(232,66,26,0.3)}
     @media(max-width:520px){.card{padding:24px 18px}.mousse-grid{grid-template-columns:1fr 1fr}.stat-row{gap:20px}}
+    /* NAV */
+    .site-nav{display:flex;justify-content:center;gap:8px;padding:0 20px 32px;position:relative;z-index:1}
+    .nav-tab{font-family:'DM Sans',system-ui,sans-serif;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;padding:10px 22px;border-radius:99px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;transition:all 0.2s}
+    .nav-tab:hover{border-color:var(--accent2);color:var(--accent2)}
+    .nav-tab.active{background:var(--accent);border-color:var(--accent);color:#fff}
+    /* TOOLS PAGE */
+    .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:8px}
+    .tool-card{background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;gap:10px}
+    .tool-icon{font-size:28px;line-height:1}
+    .tool-name{font-weight:600;font-size:14px;line-height:1.4;color:var(--text)}
+    .tool-desc{font-size:12px;color:var(--muted);line-height:1.5;flex:1}
+    .tool-price{font-family:'Bebas Neue','Arial Black',sans-serif;font-size:20px;color:var(--accent2);letter-spacing:1px}
+    .tool-btn{display:inline-block;margin-top:4px;background:var(--gold);color:#1a1200;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;padding:7px 14px;border-radius:99px;text-decoration:none;text-align:center;transition:opacity 0.2s}
+    .tool-btn:hover{opacity:0.85}
+    @media(max-width:520px){.tools-grid{grid-template-columns:1fr 1fr}}
   </style>
 </head>
 <body>
@@ -126,6 +141,13 @@
     </div>
   </div>
 
+  <nav class="site-nav">
+    <button class="nav-tab active" onclick="showPage('main')">Main</button>
+    <button class="nav-tab" onclick="showPage('tools')">Tire &amp; Mousse Changing Tools</button>
+  </nav>
+
+  <!-- MAIN PAGE -->
+  <div id="page-main">
   <div class="container">
     <div class="card">
       <div class="card-title">Select Your Tire</div>
@@ -184,6 +206,60 @@
     </div>
   </div>
 
+  </div><!-- /page-main -->
+
+  <!-- TOOLS PAGE -->
+  <div id="page-tools" style="display:none">
+  <div class="container">
+    <div class="card">
+      <div class="card-title">Tire &amp; Mousse Changing Tools</div>
+      <div class="tools-grid">
+
+        <div class="tool-card">
+          <div class="tool-icon">🔧</div>
+          <div class="tool-name">Motion Pro Spoon Type Tire Iron Set</div>
+          <div class="tool-desc">Professional-grade spoon irons for mounting and removing off-road tires. A must-have for any mousse install.</div>
+          <div class="tool-price">$48.99</div>
+          <a class="tool-btn" href="https://www.amazon.com/dp/B000QFVJ5O?tag=mousse1-20" target="_blank" rel="noopener sponsored">Buy on Amazon ↗</a>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon">🪝</div>
+          <div class="tool-name">Motion Pro Bead Buddy II</div>
+          <div class="tool-desc">Holds the tire bead seated in the drop-center while you work around the rim — essential for mousse installs.</div>
+          <div class="tool-price">$17.99</div>
+          <a class="tool-btn" href="https://www.amazon.com/dp/B0035UDHZ2?tag=mousse1-20" target="_blank" rel="noopener sponsored">Buy on Amazon ↗</a>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon">🛞</div>
+          <div class="tool-name">TUSK Adjustable Tire Changing Stand</div>
+          <div class="tool-desc">Clamps to your wheel and holds it at a comfortable height so you can change tires without bending over.</div>
+          <div class="tool-price">$139.99</div>
+          <a class="tool-btn" href="https://www.amazon.com/dp/B00YNTVRK6?tag=mousse1-20" target="_blank" rel="noopener sponsored">Buy on Amazon ↗</a>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon">🛡️</div>
+          <div class="tool-name">Rim Protectors (2-Pack)</div>
+          <div class="tool-desc">Plastic rim guards that sit between your tire irons and the rim, preventing scratches and gouges during changes.</div>
+          <div class="tool-price">$11.99</div>
+          <a class="tool-btn" href="https://www.amazon.com/dp/B0FMXWT38G?tag=mousse1-20" target="_blank" rel="noopener sponsored">Buy on Amazon ↗</a>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon">🧴</div>
+          <div class="tool-name">Nuetech Nitro Mousse Lube (50g)</div>
+          <div class="tool-desc">Purpose-made lubricant for installing Nitro Mousse foam inserts. Reduces friction and makes seating the mousse much easier.</div>
+          <div class="tool-price">$15.95</div>
+          <a class="tool-btn" href="https://www.amazon.com/dp/B077CR8XBT?tag=mousse1-20" target="_blank" rel="noopener sponsored">Buy on Amazon ↗</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div><!-- /page-tools -->
+
   <!-- CONTACT SECTION -->
   <div class="contact-section">
     <div class="contact-card">
@@ -203,6 +279,12 @@
 
   <script src="data.js"></script>
   <script>
+    function showPage(name){
+      document.getElementById('page-main').style.display  = name==='main'  ? '' : 'none';
+      document.getElementById('page-tools').style.display = name==='tools' ? '' : 'none';
+      document.querySelectorAll('.nav-tab').forEach((t,i)=>t.classList.toggle('active',(name==='main'&&i===0)||(name==='tools'&&i===1)));
+    }
+
     document.getElementById('yr').textContent = new Date().getFullYear();
     document.getElementById('statBrands').textContent  = new Set(DATA.map(d=>d.brand)).size;
     document.getElementById('statModels').textContent  = new Set(DATA.map(d=>d.brand+'|'+d.model)).size;
